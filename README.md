@@ -22,3 +22,5 @@ end_day = 100
 stations = ['iisc','lck4','hyde']
 gnss.downloadGnssData(year,start_day,end_day,stations)
 ```
+## Reference
+If you are using this code to download the IGS data then acknowledge me (Joysankar Majumdar).
