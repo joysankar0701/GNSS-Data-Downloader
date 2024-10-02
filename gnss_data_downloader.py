@@ -1,3 +1,5 @@
+# Author: Joysankar Majumdar, 2024, BHU, Varanasi
+
 from ftplib import FTP
 import glob
 import os
@@ -47,3 +49,13 @@ def downloadGnssDataSpecificDays(year: int, days: list[int], station_names: list
       ftp.cwd('..')
 
     ftp.quit()
+
+def unzipZfiles():
+    import patoolib
+    os.chdir('.')
+    for filename in os.listdir():
+        if filename.endswith('.Z'):
+            patoolib.extract_archive(filename, outdir='.')
+            os.remove(filename)
+            print(f"Extracted and deleted: {filename}")
+
