@@ -22,5 +22,16 @@ end_day = 100
 stations = ['iisc','lck4','hyde']
 gnss.downloadGnssData(year,start_day,end_day,stations)
 ```
+The files will be in .Z format, so you can manually extract the files or use the code written below.
+To use this you need to install `patool` library. To install it, use
+```bash
+pip install patool
+```
+Then you can run this code below -
+```python
+import gnss_data_downloader as gnss
+gnss.unzipZfiles()
+```
+This function will extract all the .Z files to get the raw data in the directory and after extracting it will remove the .Z files as well.
 ## Reference
 If you are using this code to download the IGS data then acknowledge me (Joysankar Majumdar).
