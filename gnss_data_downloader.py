@@ -18,7 +18,7 @@ def downloadGnssData(year: int, day_start: int, day_end: int, station_names: lis
       ftp.cwd( f'{day}')
       files = ftp.nlst()
       for station in station_names:
-        matching_files = [file for file in files if (file.startswith(station) and (file.endswith('o.Z') or file.endswith('n.Z')))]
+        matching_files = [file for file in files if (file.startswith(station) and (file.endswith('o.Z') or file.endswith('n.Z') or file.endswith('n.gz') or file.endswith('n.gz')))]
         for file in matching_files:
           with open(file, 'wb') as local_file:
               print(f"Downloading {file}...")
@@ -41,7 +41,7 @@ def downloadGnssDataSpecificDays(year: int, days: list[int], station_names: list
       ftp.cwd( f'{day}')
       files = ftp.nlst()
       for station in station_names:
-        matching_files = [file for file in files if (file.startswith(station) and (file.endswith('o.Z') or file.endswith('n.Z')))]
+        matching_files = [file for file in files if (file.startswith(station) and (file.endswith('o.Z') or file.endswith('n.Z') or file.endswith('n.gz') or file.endswith('n.gz')))]
         for file in matching_files:
           with open(file, 'wb') as local_file:
               print(f"Downloading {file}...")
