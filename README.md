@@ -1,7 +1,7 @@
 # GNSS-Data-Downloader
 It is python package for downloading naviation(n) and observation(o) files for various IGS stations with specific days.
 ## Tutorial
-- Download the `gnss_data_downloader.py` file from here and put it in a directory where you want to download your n.Z and o.Z files.
+- Download the `gnss_data_downloader.py` file from here and put it in a directory where you want to download your n.Z or n.gz and o.Z or o.gz files.
 - Use jupyter notebook or normal python, and import this as `import gnss_data_downloader as gnss`.
 - Two functions are available `gnss.downloadGnssData` to downlaod all data between two days of the year and `gnss.downloadGnssDataSpecificDays` to downlaod data for some specific days of the year.
 To downlaod data for some specific days in a year with some specific stations. Use the code given below.
