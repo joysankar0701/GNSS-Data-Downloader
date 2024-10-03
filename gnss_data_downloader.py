@@ -59,3 +59,12 @@ def unzipZfiles():
             os.remove(filename)
             print(f"Extracted and deleted: {filename}")
 
+
+def unzipgzfiles():
+    import patoolib
+    os.chdir('.')
+    for filename in os.listdir():
+        if filename.endswith('.gz'):
+            patoolib.extract_archive(filename, outdir='.')
+            os.remove(filename)
+            print(f"Extracted and deleted: {filename}")
