@@ -31,7 +31,8 @@ Then you can run this code below -
 ```python
 import gnss_data_downloader as gnss
 gnss.unzipZfiles()
+gnss.unzipgzfiles()
 ```
-This function will extract all the .Z files to get the raw data in the directory and after extracting it will remove the .Z files as well.
+This function will extract all the .Z or .gz files to get the raw data in the directory and after extracting it will remove the .Z or .gz files as well.
 ## Reference
 If you are using this code to download the IGS data then acknowledge me (Joysankar Majumdar).
